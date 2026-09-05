@@ -33,3 +33,393 @@
             margin: 0 auto;
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            height: 60px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            height: 50px;
+        }
+
+        .logo img {
+            max-height: 50px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .nav-links a:hover {
+            color: #e74c3c;
+        }
+
+        .nav-links a.active {
+            color: #e74c3c;
+        }
+
+        .navbar-content img {
+            max-height: 50px;
+            flex-grow: 1;
+        }
+
+        .user-menu {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn-signin {
+            padding: 8px 16px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .btn-signin:hover {
+            background-color: #c0392b;
+        }
+
+        /* ヘッダーバナー */
+        .header-banner {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .header-banner h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .header-banner p {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+
+        /* メインコンテンツ */
+        .main-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #333;
+            padding-left: 10px;
+            border-left: 4px solid #e74c3c;
+        }
+
+        /* ゲームグリッド */
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .game-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        .game-image {
+            width: 100%;
+            height: 160px;
+            background: url('games.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .game-info {
+            padding: 15px;
+        }
+
+        .game-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+            line-height: 1.3;
+            height: 2.8em;
+            overflow: hidden;
+        }
+
+        .game-stats {
+            font-size: 12px;
+            color: #999;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .player-count {
+            color: #27ae60;
+            font-weight: 600;
+        }
+
+        /* フィルターバー */
+        .filter-bar {
+            background-color: white;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .filter-dropdown {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        /* フッター */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 15px;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #e74c3c;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #95a5a6;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 15px;
+            }
+
+            .games-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 15px;
+            }
+
+            .header-banner h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ナビゲーションバー -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <img src="icon.jpg" alt="Roblox Icon" style="width: 50px; height: 50px; object-fit: contain;">
+                <img src="logo.png" alt="Roblox Logo" style="height: 40px; object-fit: contain;">
+            </div>
+            
+            <img src="navbar.jpg" alt="Navigation" style="max-height: 50px; object-fit: contain;">
+
+            <div class="user-menu">
+                <button class="btn-signin">Log In</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ヘッダーバナー -->
+    <div class="header-banner">
+        <img src="logo.png" alt="Roblox Logo" style="max-height: 100px; margin-bottom: 20px; object-fit: contain;">
+        <p style="font-size: 18px; margin-bottom: 10px;">版 2.250.81045</p>
+        <p>あなたの想像をゲームに</p>
+    </div>
+
+    <!-- メインコンテンツ -->
+    <div class="main-content">
+        <div class="filter-bar">
+            <label for="filter-sort">ソート:</label>
+            <select class="filter-dropdown" id="filter-sort">
+                <option>すべて</option>
+                <option>人気</option>
+                <option>新着</option>
+            </select>
+        </div>
+
+        <h2 class="section-title">人気のゲーム</h2>
+        <div class="games-grid">
+            <div class="game-card">
+                <div class="game-image"></div>
+                <div class="game-info">
+                    <div class="game-title">Knight's Revenge RPG</div>
+                    <div class="game-stats"><span class="player-count">3.2M</span> 実行中</div>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <div class="game-image"></div>
+                <div class="game-info">
+                    <div class="game-title">ROBLOX High School</div>
+                    <div class="game-stats"><span class="player-count">2.8M</span> 実行中</div>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <div class="game-image"></div>
+                <div class="game-info">
+                    <div class="game-title">Work at a Pizza Place</div>
+                    <div class="game-stats"><span class="player-count">2.2M</span> 実行中</div>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <div class="game-image"></div>
+                <div class="game-info">
+                    <div class="game-title">RoCitizens [BUG FIX]</div>
+                    <div class="game-stats"><span class="player-count">2.1M</span> 実行中</div>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <div class="game-image"></div>
+                <div class="game-info">
+                    <div class="game-title">Speed Run 4</div>
+                    <div class="game-stats"><span class="player-count">1.7M</span> 実行中</div>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <div class="game-image"></div>
+                <div class="game-info">
+                    <div class="game-title">Apocalypse Rising</div>
+                    <div class="game-stats"><span class="player-count">1.6M</span> 実行中</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ROBLOX について</h3>
+                <ul>
+                    <li><a href="#">プラットフォーム</a></li>
+                    <li><a href="#">コミュニティ</a></li>
+                    <li><a href="#">安全・セキュリティ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>開発者向け</h3>
+                <ul>
+                    <li><a href="#">スタジオ</a></li>
+                    <li><a href="#">API リファレンス</a></li>
+                    <li><a href="#">開発者フォーラム</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>サポート</h3>
+                <ul>
+                    <li><a href="#">ヘルプセンター</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                    <li><a href="#">プライバシー</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Roblox Corporation. Version 2.250.81045</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.game-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const title = this.querySelector('.game-title').textContent;
+                alert('ゲーム: ' + title + '\nをプレイします！');
+            });
+        });
+
+        document.querySelector('.btn-signin').addEventListener('click', function() {
+            alert('ログインページに移動します');
+        });
+    </script>
+</body>
+</html>
